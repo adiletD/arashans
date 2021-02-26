@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux' // selector to select par
 import { Row, Col } from 'react-bootstrap'
 import Product from '../components/Product'
 import { listProducts } from '../actions/productActions'
+import Loader from '../components/Loader'
+import Message from '../components/Message'
 
 const HomeScreen = () => {
   const dispatch = useDispatch() // we use hooks here
@@ -21,9 +23,9 @@ const HomeScreen = () => {
       <h1>Latest Products</h1>
       {/*if loading print loading else if error print error, else do the normal thing*/}
       {loading ? (
-        <h2>Loading...</h2>
+        <Loader />
       ) : error ? (
-        <h3>{error}</h3> // if we throw an error from the router it will show up in this component
+        <Message variant='danger'>{error}</Message> // if we throw an error from the router it will show up in this component
       ) : (
         <Row>
           {products.map((product) => (
