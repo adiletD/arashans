@@ -9,7 +9,7 @@ import Message from '../components/Message'
 const HomeScreen = () => {
   const dispatch = useDispatch() // we use hooks here
 
-  const productList = useSelector((state) => state.productList)
+  const productList = useSelector((state) => state.productList) //we stored the productList stored in the redux state to the 'productList' variable
   const { loading, error, products } = productList // parts of the state that could be sent down
 
   useEffect(() => {
