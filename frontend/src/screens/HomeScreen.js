@@ -23,7 +23,7 @@ const HomeScreen = () => {
       {loading ? (
         <h2>Loading...</h2>
       ) : error ? (
-        <h3>{error}</h3>
+        <h3>{error}</h3> // if we throw an error from the router it will show up in this component
       ) : (
         <Row>
           {products.map((product) => (
