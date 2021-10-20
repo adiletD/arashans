@@ -1,5 +1,6 @@
 main {
   min-height: 80vh;
+  /* pushes the footer down making more white sapce for the body */
 }
 
 h3 {
