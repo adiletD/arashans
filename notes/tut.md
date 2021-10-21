@@ -1,3 +1,8 @@
+
+####################################################
+# SETUP
+
+
 # create react app
 
 - get rid of the comments, change some meta data
@@ -52,3 +57,28 @@ cdnjs.com
 
 - search fontawesome
 - put it in the public index.html
+
+
+####################################################
+
+# HOMESCREEN
+
+
+- we just use the js file as a bs for a moment
+
+
+# homescreen
+
+- impoty ptroducts
+- import row
+= products.map
+- 
+
+# product
+
+- takes product as a prop
+- we can sde
+- customize the components of the product
+
+
+# 
