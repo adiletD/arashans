@@ -1,7 +1,6 @@
-
 ####################################################
-# SETUP
 
+# SETUP
 
 # create react app
 
@@ -58,27 +57,33 @@ cdnjs.com
 - search fontawesome
 - put it in the public index.html
 
-
 ####################################################
 
 # HOMESCREEN
 
-
 - we just use the js file as a bs for a moment
-
 
 # homescreen
 
 - impoty ptroducts
 - import row
-= products.map
-- 
+  = products.map
+-
 
 # product
 
 - takes product as a prop
 - we can sde
 - customize the components of the product
+- proptypes
+
+# react router
+
+- install react router dom and react router bootstrap
+- Link to
+- Likn container
+
+# product details
 
 
-# 
+_id properties are automatically created in mongo

@@ -75,6 +75,7 @@ Rating.defaultProps = {
 }
 
 // if these are not satisfied thenb we get an error in the console
+// mnot needed for all props
 Rating.propTypes = {
   value: PropTypes.number.isRequired,
   text: PropTypes.string.isRequired,

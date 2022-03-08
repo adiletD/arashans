@@ -14,6 +14,8 @@ const App = () => {
         <Container>
           <h1>Welcome to Arashans</h1>
           <Route path='/' component={HomeScreen} exact />
+          {/* has to be exactly this */}
+          
           <Route path='/product/:id' component={ProductScreen} />
         </Container>
       </main>

@@ -34,7 +34,7 @@ const importData = async () => {
     process.exit()
   } catch (error) {
     console.error(`${error}`)
-    process.exit()
+    process.exit(1)
   }
 }
 
@@ -53,7 +53,7 @@ const destroyData = async () => {
   }
 }
 
-if (process.argv[2] == '-d') {
+if (process.argv[2] == '-d') {  // ex: node backend/seeder -d
   destroyData()
 } else {
   importData()

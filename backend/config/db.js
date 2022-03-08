@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
 
+
+// always returns a promise
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI, {
@@ -11,8 +13,8 @@ const connectDB = async () => {
 
     console.log(`MongoDB Connected: ${conn.connection.host}`)
   } catch (error) {
-    console.error(object)
-    process.exit()
+    console.error(`Error: ${object}`)
+    process.exit(1)
   }
 }
 

@@ -11,7 +11,6 @@ import Loader from '../components/Loader'
 const ProductScreen = ({ match }) => {
   const dispatch = useDispatch()
   const productDetails = useSelector((state) => state.productDetails)
-
   const { loading, error, product } = productDetails
 
   useEffect(() => {
@@ -28,61 +27,61 @@ const ProductScreen = ({ match }) => {
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
-        <Row>
-          <Col md={6}>
-            <Image src={product.image} alt={product.name} />
-          </Col>
-          <Col md={3}>
-            <ListGroup variant='flush'>
-              <ListGroupItem>
-                <h3>{product.name}</h3>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Rating
-                  value={product.rating}
-                  text={`${product.numReviews} reviews`}
-                />
-              </ListGroupItem>
-              <ListGroupItem>Price: ${product.price}</ListGroupItem>
-              <ListGroupItem>Description: {product.description}</ListGroupItem>
-            </ListGroup>
-          </Col>
+            <Row>
+              <Col md={6}>
+                <Image src={product.image} alt={product.name} />
+              </Col>
+              <Col md={3}>
+                <ListGroup variant='flush'>
+                  <ListGroupItem>
+                    <h3>{product.name}</h3>
+                  </ListGroupItem>
+                  <ListGroupItem>
+                    <Rating
+                      value={product.rating}
+                      text={`${product.numReviews} reviews`}
+                    />
+                  </ListGroupItem>
+                  <ListGroupItem>Price: ${product.price}</ListGroupItem>
+                  <ListGroupItem>Description: {product.description}</ListGroupItem>
+                </ListGroup>
+              </Col>
 
-          <Col md={3}>
-            <Card>
-              <ListGroup variant='flush'>
-                <ListGroupItem>
-                  <Row>
-                    <Col>Price:</Col>
-                    <Col>
-                      <strong>${product.price}</strong>
-                    </Col>
-                  </Row>
-                </ListGroupItem>
-                <ListGroupItem>
-                  <Row>
-                    <Col>Status:</Col>
-                    <Col>
-                      <strong>
-                        {product.countInStock > 0 ? 'In Stock' : 'Out of Stock'}
-                      </strong>
-                    </Col>
-                  </Row>
-                </ListGroupItem>
-                <ListGroupItem>
-                  <Button
-                    className='btn-block'
-                    type='button'
-                    disabled={product.countInStock === 0}
-                  >
-                    Add To Cart
+              <Col md={3}>
+                <Card>
+                  <ListGroup variant='flush'>
+                    <ListGroupItem>
+                      <Row>
+                        <Col>Price:</Col>
+                        <Col>
+                          <strong>${product.price}</strong>
+                        </Col>
+                      </Row>
+                    </ListGroupItem>
+                    <ListGroupItem>
+                      <Row>
+                        <Col>Status:</Col>
+                        <Col>
+                          <strong>
+                            {product.countInStock > 0 ? 'In Stock' : 'Out of Stock'}
+                          </strong>
+                        </Col>
+                      </Row>
+                    </ListGroupItem>
+                    <ListGroupItem>
+                      <Button
+                        className='btn-block'
+                        type='button'
+                        disabled={product.countInStock === 0}
+                      >
+                        Add To Cart
                   </Button>
-                </ListGroupItem>
-              </ListGroup>
-            </Card>
-          </Col>
-        </Row>
-      )}
+                    </ListGroupItem>
+                  </ListGroup>
+                </Card>
+              </Col>
+            </Row>
+          )}
     </>
   )
 }

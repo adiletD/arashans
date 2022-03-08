@@ -28,9 +28,12 @@ const HomeScreen = () => {
         <Message variant='danger'>{error}</Message> // if we throw an error from the router it will show up in this component
       ) : (
         <Row>
-          {products.map((product) => (  // taking te product prop
+          {products.map((
+            product // taking te product prop
+          ) => (
+            // the key here has to be an id, unique
             <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-              <Product product={product} />  
+              <Product product={product} />
             </Col>
           ))}
         </Row>
